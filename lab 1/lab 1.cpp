@@ -48,14 +48,14 @@ int main(int argc, char** argv)
 
 
     glm::vec3 Vertices[3]; // инициализация точек
-    Vertices[0] = glm::vec3(0.0f, -0.5f, 0.0f); // X Y Z
+    Vertices[0] = glm::vec3(0.0f, 0.5f, 0.0f); // X Y Z
     Vertices[1] = glm::vec3(0.5f, 0.0f, 0.0f);
     Vertices[2] = glm::vec3(-0.5f, 0.0f, 0.0f);
 
-    glGenBuffers(1, &VBO);// функция генерации объектов
+    glGenBuffers(1, &VBO);// создаём буффер для помещения объетов
     glBindBuffer(GL_ARRAY_BUFFER, VBO); // буфер будет хранить массив вершин
     glBufferData(GL_ARRAY_BUFFER, sizeof(Vertices), Vertices, GL_STATIC_DRAW); // наполнение буфера данными
-
+                                                               // источник для команд рисования 
 
     glutMainLoop(); // регулярный вызов отрисовки
 }
